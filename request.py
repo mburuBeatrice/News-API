@@ -22,4 +22,30 @@ def get_news(category):
             news_articles_list = get_news_response['articles']
             news_articles = process_articles(news_articles_list)
 
+    return news_articles
+
+def process_articles(news_list):
+    '''
+    Function that processes the news articles and transform them
+    to a list of objects
+
+    Args:
+        news_list:A list of dictionaries that contain news details
+
+    Returns:
+        news_articles:A list of news objects
+    '''
+    news_articles = []
+    for news_item in news_list:
+        author = news_item.get('author')
+        title = news_item.get('title')
+        description = news_item.get('description')
+        url = news_item.get('url')
+        urlToImage = news_item.get('urlToImage')
+        PublishedAt = news_item.get('PublishedAt')
+
+        if urlToImage:
+            news_object = News(author,title,description,url,urlToImage,PublishedAt)
+            news_articles.append(news_object)
+
     return news_articles        
