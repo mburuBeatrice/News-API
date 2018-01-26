@@ -9,6 +9,34 @@
         {% endif %}
     </head>
     <body>
+      <!--  business news section  -->
+      <h3> Business news </h3>
+       <ul>
+          {% for business_news in business %}
+              <li>{{ business_news.title}}</li>
+          {% endfor %}
+      </ul>
+      <!--  entertainment news section  -->
+      <h3> Entertainment news </h3>
+       <ul>
+          {% for entertainment_news in entertainment %}
+              <li>{{ entertainment_news.title}}</li>
+          {% endfor %}
+      </ul>
+      <!--  General news section  -->
+      <h3> General news </h3>
+       <ul>
+          {% for general_news in general %}
+              <li>{{ general_news.title}}</li>
+          {% endfor %}
+      </ul>
+      <!--  Technology news section  -->
+      T<h3> Technology news </h3>
+       <ul>
+          {% for technology_news in technology %}
+              <li>{{ technology_news.title}}</li>
+          {% endfor %}
+      </ul>
 
     </body>
 </html>

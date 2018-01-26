@@ -1,7 +1,7 @@
 from app import app
 
 # Getting api key
-api_key = app.config['NEWS_API_KEy']
+api_key = app.config['NEWS_API_KEY']
 
 # Getting the news base url
 base_url = app.config["NEWS_API_BASE_URL"]
@@ -42,10 +42,10 @@ def process_articles(news_list):
         description = news_item.get('description')
         url = news_item.get('url')
         urlToImage = news_item.get('urlToImage')
-        PublishedAt = news_item.get('PublishedAt')
+        publishedAt = news_item.get('publishedAt')
 
         if urlToImage:
-            news_object = News(author,title,description,url,urlToImage,PublishedAt)
+            news_object = News(author,title,description,url,urlToImage,publishedAt)
             news_articles.append(news_object)
 
-    return news_articles        
+    return news_articles
