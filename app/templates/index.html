@@ -1,3 +1,6 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,34 +12,29 @@
         {% endif %}
     </head>
     <body>
+      <!--content block-->
+      {% block content%}
+
       <!--  business news section  -->
       <h3> Business news </h3>
        <ul>
-          {% for business_news in business %}
-              <li>{{ business_news.title}}</li>
-          {% endfor %}
+        {{ macro.displayNewsList(business)}}
       </ul>
       <!--  entertainment news section  -->
       <h3> Entertainment news </h3>
        <ul>
-          {% for entertainment_news in entertainment %}
-              <li>{{ entertainment_news.title}}</li>
-          {% endfor %}
+          {{ macro.displayNewsList(entertainment)}}
       </ul>
       <!--  General news section  -->
       <h3> General news </h3>
        <ul>
-          {% for general_news in general %}
-              <li>{{ general_news.title}}</li>
-          {% endfor %}
+          {{ macro.displayNewsList(general)}}
       </ul>
       <!--  Technology news section  -->
       T<h3> Technology news </h3>
        <ul>
-          {% for technology_news in technology %}
-              <li>{{ technology_news.title}}</li>
-          {% endfor %}
+          {{ macro.displayNewsList(technology)}}
       </ul>
-
+      {% endblock %}
     </body>
 </html>
