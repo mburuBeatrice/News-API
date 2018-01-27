@@ -1,3 +1,4 @@
+{% extends 'base.html'%}
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,6 +10,29 @@
         {% endif %}
     </head>
     <body>
+      <!-- Content block -->
+  {% block content %}
+  <div class="container">
+
+      <!-- urlToImage background -->
+      <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 urlToImage" style="background: url({{news.urlToImage}}) no-repeat center center">
+          </div>
+
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 news-details">
+              <h3>{{ news.title }}</h3>
+
+              <p class="author"> {{ news.author }}</p>
+              <p class="title"> <b> {{ news.title }}</p>
+              <p class="description"> <b> {{ news.description }}</p>
+              <p class="url"> <b> {{ news.url }}</p>
+              <p class="publishedAt"> <b> {{ news.publishedAt }}</p>
+
+          </div>
+      </div>
+
+  </div>
+  {% endblock %}
 
     </body>
 </html>
