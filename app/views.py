@@ -10,13 +10,13 @@ def index():
     """
     # Getting popular news
     business_news = get_news('business')
-    print(business_news)
+
     entertainment_news = get_news('entertainment')
-    print(entertainment_news)
+
     general_news = get_news('general')
-    print(general_news)
+
     technology_news = get_news('technology')
-    print (technology_news)
+
     title = 'Home - Welcome to news on the go.'
 
     return render_template('index.html',title = title,business=business_news,entertainment=entertainment_news,general=general_news,technology=technology_news)
