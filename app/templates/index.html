@@ -12,7 +12,13 @@
         {% endif %}
     </head>
     <body>
-      <!--content block-->
+        <!-- Styles block -->
+
+        {% block styles%}
+            {{ super() }}
+            <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+        {% endblock %}
+        <!-- Content block -->
       {% block content%}
 
       <!--  business news section  -->
@@ -31,7 +37,7 @@
           {{ macro.displayNewsList(general)}}
       </ul>
       <!--  Technology news section  -->
-      T<h3> Technology news </h3>
+      <h3> Technology news </h3>
        <ul>
           {{ macro.displayNewsList(technology)}}
       </ul>
