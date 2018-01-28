@@ -6,9 +6,10 @@
 
 
         <img src="{{news.urlToImage}}" alt="url image" class="img-responsive"/>
+        <a href="{{ news.url}}" target="_blank">{{news.title}}</a>
         <li>{{ news.author}}</li>
         <li>{{ news.description}}</li>
-        <a href='{{ news.url}}'>{{news.title}}</a>
+      
 
         <li>{{ news.publishedAt}}</li>
     {% endfor %}
