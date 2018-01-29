@@ -23,43 +23,57 @@
       {% block content%}
 
     <div class ="row">
-    <div class="col-md-3">
+    <div class="col-md-2">
         <!--  business news section  -->
       <h3> Business news </h3>
+      <div class="col-md-10">
       <ul>
        {{ macro.displayNewsList(business)}}
      </ul>
+     </div>
     </div>
-
+    </div>
     <hr>
-
-    <div class="col-md-3">
+    <br>
+    <div class="row">
+    <div class="col-md-2">
     <!--  entertainment news section  -->
     <h3> Entertainment news </h3>
+    <div class="col-md-10">
     <ul>
         {{ macro.displayNewsList(entertainment)}}
     </ul>
-    </div>
-    <hr>
-    <div class="col-md-3" >
-      <!--  General news section  -->
-      <h3> General news </h3>
-       <ul>
-          {{ macro.displayNewsList(general)}}
-      </ul>
-    </div>
-    <hr>
-    <div class="col-md-3">
-        <!--  Technology news section  -->
-        <h3> Technology news </h3>
-        <ul>
-        {{ macro.displayNewsList(technology)}}
-        </ul>
-    </div>
 </div>
+    </div>
+    </div>
+    <hr>
+    <br>
 
-     
-     
+    <div class="row">
+    <div class="col-md-2" >
+    <!--  General news section  -->
+    <h3> General news </h3>
+    <div class="col-md-10">
+    <ul>
+        {{ macro.displayNewsList(general)}}
+    </ul>
+    </div>
+  </div>
+  <hr>
+  <br>
+  <div class="row">
+<div class="col-md-2">
+    <!--  Technology news section  -->
+    <h3> Technology news </h3>
+    <div class="col-md-10">
+    <ul>
+    {{ macro.displayNewsList(technology)}}
+    </ul>
+    </div>
+    </div>
+  </div>
+
+    </body>
     
       {% endblock %}
     </body>
