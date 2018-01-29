@@ -1,4 +1,4 @@
-from app import app
+# from app import app
 import urllib.request,json
 from .models import News
 
@@ -76,4 +76,4 @@ def get_newsy(id):
             publishedAt = news_details_response.get('publishedAt')
 
             news_object = News(id,title,description,url,urlToImage,publishedAt)
-        return news_object
+    return news_object
