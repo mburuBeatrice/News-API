@@ -1,8 +1,8 @@
-from flask import render_template
-from app import app
+from flask import render_template,request,redirect,url_for
+from . import main
 from .request import get_news,get_newsy
 #views
-@app.route('/')
+@main.route('/')
 def index():
 
     """
@@ -20,7 +20,7 @@ def index():
     title = 'Home - Welcome to news on the go.'
 
     return render_template('index.html',title = title,business=business_news,entertainment=entertainment_news,general=general_news,technology=technology_news)
-@app.route('/news/<int:news_id>')
+@main.route('/news/<int:news_id>')
 def news(news_id):
     """
     View news page function that returns news details page
