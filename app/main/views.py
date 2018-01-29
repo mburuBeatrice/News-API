@@ -1,6 +1,6 @@
 from flask import render_template,request,redirect,url_for
 from . import main
-from .request import get_news,get_newsy
+from ..request import get_news,get_newsy
 #views
 @main.route('/')
 def index():
@@ -28,4 +28,4 @@ def news(news_id):
     """
     newsy = get_newsy(id)
     title = f'You are viewing {news_id}'
-    return render_template('news.html',title = title)
+    return render_template('.news.html',title = title)
