@@ -21,36 +21,39 @@
         {% endblock %}
         <!-- Content block -->
       {% block content%}
-
-    <div class ="row">
+<div class="row">
+    <div class ="col-sm-12">
         
             <!--  business news section  -->
-            <h3> Business news </h3>
+            <h3>Business news</h3>
             <ul>
                 {{ macro.displayNewsList(business)}}
             </ul>
         
     </div>
-    <hr>
-    <br>
-    <div class="row">
-    
-            <!--  entertainment news section  -->
-            <h3> Entertainment news </h3>
-       
-      
-            <ul>
-            {{ macro.displayNewsList(entertainment)}}
-            </ul>
-      
     </div>
     <hr>
     <br>
-
     <div class="row">
+        <div class="col-sm-12">
+        
+          <h3> Entertainment News</h3>
+    
+        
+            <!-- entertainment  section  -->
+              <ul>
+               {{ macro.displayNewsList(entertainment)}}
+             </ul>
+           
+         </div>
+         </div>
+    <hr>
+    <br>
+    <div class="row">
+    <div class="col-sm-12">
         
             <!--  General news section  -->
-            <h3> General news </h3>
+            <h3>General news</h3>
         
         
             <ul>
@@ -58,12 +61,14 @@
             </ul>
         
   </div>
+  </div>
   <hr>
   <br>
-    <div class="row">
+  <div class="row">
+    <div class="col-sm-12">
        
             <!--  Technology news section  -->
-            <h3> Technology news </h3>
+            <h3>Technology news</h3>
            
        
             <ul>
@@ -71,7 +76,7 @@
             </ul>
        
     </div>
-  
+  </div>
 
     </body>
     
