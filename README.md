@@ -35,12 +35,12 @@ As a user I would like:
 ## Setup/Installation Requirements
 * internet access
 * git clone https://github.com/mburuBeatrice/News-API.git
-* $ cd news-highlights
-* $ python3.6 -m venv virtual (install virtual environment)
-* $ source virtual/bin/activate
-* $ python3.6 -m pip install -r requirements.txt (install all dependencies)
+*''' cd news-highlights'''
+* '''python3.6 -m venv virtual''' (install virtual environment)
+*'''source virtual/bin/activate'''
+*'''python3.6 -m pip install -r requirements.txt''' (install all dependencies)
 * Inside the manage.py module change the config_name parameter from 'production' to 'development' ie app = create_app('production') should be app = create_app('development')
-* $ ./start.sh
+* '''./start.sh'''
 
 
 # Support and Contacts
